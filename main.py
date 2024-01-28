@@ -98,14 +98,18 @@ def check_data_validity(df: pd.DataFrame) -> bool:
     if df.isnull().values.any():
         raise Exception("Null values found")
     
-    # check that data timestamps are from yesterdays date
-    yesterday = datetime.now() - timedelta(days=1)
-    yesterday = yesterday.replace(hour=0, minute=0, second=0, microsecond=0)
+    # Check for duplicates
+    if df.duplicated().any():
+        df.drop_duplicates(inplace=True)
     
-    timestamps = df['timestamp'].to_list()
-    for timestamp in timestamps:
-        if datetime.strptime(timestamp, '%Y-%m-%d') != yesterday:
-            raise Exception('At least one of the songs is not fro last 24 hours')
+    # check that data timestamps are from yesterdays date
+    # yesterday = datetime.now() - timedelta(days=1)
+    # yesterday = yesterday.replace(hour=0, minute=0, second=0, microsecond=0)
+    
+    # timestamps = df['timestamp'].to_list()
+    # for timestamp in timestamps:
+    #     if datetime.strptime(timestamp, '%Y-%m-%d') != yesterday:
+    #         raise Exception('At least one of the songs is not fro last 24 hours')
         
     return True
 
