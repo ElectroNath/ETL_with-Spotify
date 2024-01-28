@@ -32,13 +32,13 @@ Before you begin, ensure you have the following prerequisites:
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/your_username/spotify-data-etl.git
+   git clone https://github.com/ElectroNath/ETL_with-Spotify.git
 
 
 2. Navigate to the project directory:
 
     ```bash
-    cd spotify-data-etl
+    cd ETL_with-Spotify
 
 3. Install the required dependencies:
 
@@ -50,8 +50,9 @@ Before you begin, ensure you have the following prerequisites:
 1. Obtain your Spotify Developer credentials (Client ID, Redirect URI) and create a .env file in the project directory:
 
     ```env
-    CLIENT_ID=your_client_id
-    REDIRECT_URI=http://localhost:8080
+    CLIENT_ID= <your_client_id>
+    REDIRECT_URI= <request uri set for app created>
+    Kindly note that you need to create an app on the spotify developers page to get these credentials.
 
 2. Run the ETL process:
 
