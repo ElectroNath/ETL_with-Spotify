@@ -18,7 +18,7 @@ import hashlib
 
 # Generate code verifier
 def generate_random_string(length):
-    possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+    possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789' #Note this code is nothing special but a placeholder.
     values = [secrets.randbelow(len(possible)) for _ in range(length)]
     return ''.join([possible[x % len(possible)] for x in values])
 
