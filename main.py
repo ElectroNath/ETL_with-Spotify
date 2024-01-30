@@ -469,3 +469,7 @@ conn.close()
 
 
 # print(data)
+
+
+# AT 30January2024 I finally got the installatin of airflow correctly. WEBSERVER & SCHEDULER working perfectly.
+# Configure my airflow to see /Users/nate/Documents/Projects/DATA_ENGINEERING_PROJECTS/ETL_Spotify_Data/dags as the location
