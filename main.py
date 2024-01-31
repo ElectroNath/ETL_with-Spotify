@@ -16,6 +16,15 @@ import hashlib
 
 
 
+# WebDriver
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome.options import Options
+
+
+
+
+
 # Generate code verifier
 def generate_random_string(length):
     possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789' #Note this code is nothing special but a placeholder.
@@ -183,10 +192,7 @@ auth_url_with_params = f"{auth_url}?{urlencode(params)}"
 
 
 
-# WebDriver
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.chrome.options import Options
+
 
 # Set the path to your WebDriver executable
 # webdriver_path = '/Users/nate/Documents/Projects/chromedriver-mac-x64/chromedriver'
