@@ -1,4 +1,4 @@
-from main import recent_play_list
+from spotify_etl import recent_play_list
 import pandas as pd
 
 
